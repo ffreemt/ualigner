@@ -1,0 +1,27 @@
+{
+    "name": "ualigner",
+    "version": "0.1.0",
+    "description": "description",
+    "main": "index.js",
+    "repository": "git@github.com:ffreemt/ualigner.git",
+    "author": "ffreemt",
+    "license": "MIT",
+    "dependencies": {
+        "npm-run-all": "^4.1.5"
+    },
+    "scripts": {
+        "start": "pyright && pytest && yarn style",
+        "test": "nodemon -w tests -w ualigner -x pytest tests",
+        "pyright": "nodemon -w ualigner -w .venv -e .py -x pyright ualigner tests",
+        "pytest": "nodemon -w tests -w ualigner -e .py -x pytest tests ualigner",
+        "style": "nodemon -w ualigner -w tests -x \"black tests ualigner && python -m flake8\"",
+        "docstyle": "nodemon -w ualigner -w tests -x pydocstyle --convention=google tests ualigner",
+        "pylint": "nodemon -w ualigner -e .py -x pylint ualigner",
+        "test:ualigner": "nodemon -w tests -e .py -x pytest -k ualigner tests",
+        "publish": "poetry build && poetry publish",
+        "black": "black tests ualigner",
+        "flake8": "flake8 tests ualigner",
+        "pep257": "pep257 tests ualigner",
+        "final": "run-s pep257 black flake8 pytest"
+    }
+}

@@ -1,0 +1,27 @@
+cdto pypi
+
+cookiecut cookiecutter-pypi-project
+cd repo-name
+
+git init
+gh repo create repo-name --public -d "repo descr"
+git push
+
+poetry install
+yarn
+
+check cookiecutter.
+rg --pcre2 "(?<!\.)(:?repo_name|pack_name|mod_name|func_name)" --hidden
+
+yarn init
+or pnpm init
+or npm init
+
+yarn add npm-run-all  # run-s
+
+git ac "Update..."
+# git add . && git commit -m "Update ..."
+
+poetry publish --build
+REM or
+poetry build && poetry publish
