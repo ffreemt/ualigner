@@ -9,11 +9,18 @@ repository = "https://github.com/ffreemt/ualigner"
 include = ["LICENSE"]
 
 [tool.poetry.dependencies]
-python = ">=3.8.5,<4.0"
+python = "~3.8"
 logzero = "^1.7.0"
 icecream = "^2.1.1"
 install = "^1.3.5"
 alive-progress = "^2.3.1"
+
+torch = [
+  {url = "https://download.pytorch.org/whl/cpu/torch-1.10.0%2Bcpu-cp38-cp38-linux_x86_64.whl", markers = "sys_platform == 'linux'"},
+  {url = "https://download.pytorch.org/whl/cpu/torch-1.10.0%2Bcpu-cp38-cp38-win_amd64.whl", markers = "sys_platform == 'win32'"}
+]
+# numpy = "^1.21.4"
+
 model-pool = {git = "https://github.com/ffreemt/align-model-pool.git"}
 seg-text = {git = "https://github.com/ffreemt/seg-text"}
 
@@ -37,6 +44,8 @@ flake8 = "^3.9.2"
 pydocstyle = "^6.1.1"
 # tbump = "^6.3.2"
 poethepoet = "^0.10.0"
+ipython = "^8.0.1"
+rich = "^11.2.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
