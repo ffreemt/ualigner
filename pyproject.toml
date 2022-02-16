@@ -21,8 +21,8 @@ torch = [
 ]
 # numpy = "^1.21.4"
 
-model-pool = {git = "https://github.com/ffreemt/align-model-pool.git"}
-seg-text = {git = "https://github.com/ffreemt/seg-text"}
+seg-text = "^0.1.0"
+model-pool = "^0.1.0"
 
 [tool.poe.executor]
 type = "poetry"

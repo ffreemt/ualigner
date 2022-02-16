@@ -271,18 +271,11 @@ description = "pack_name descr "
 category = "main"
 optional = false
 python-versions = ">=3.7.3,<4.0"
-develop = false
 
 [package.dependencies]
-icecream = "^2.1.1"
-install = "^1.3.5"
-logzero = "^1.7.0"
-
-[package.source]
-type = "git"
-url = "https://github.com/ffreemt/align-model-pool.git"
-reference = "master"
-resolved_reference = "8a5a56d6f35e9dbb6a57a37b94b16c445235bfc8"
+icecream = ">=2.1.1,<3.0.0"
+install = ">=1.3.5,<2.0.0"
+logzero = ">=1.7.0,<2.0.0"
 
 [[package]]
 name = "more-itertools"
@@ -411,6 +404,14 @@ python-versions = ">=3.6,<4.0"
 [package.dependencies]
 pastel = ">=0.2.0,<0.3.0"
 tomlkit = ">=0.6.0,<1.0.0"
+
+[[package]]
+name = "polyglot"
+version = "16.7.4"
+description = "Polyglot is a natural language pipeline that supports massive multilingual applications."
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "prompt-toolkit"
@@ -552,22 +553,16 @@ description = "pack_name descr "
 category = "main"
 optional = false
 python-versions = ">=3.8,<4.0"
-develop = false
 
 [package.dependencies]
-icecream = "^2.1.1"
-install = "^1.3.5"
-logzero = "^1.7.0"
+icecream = ">=2.1.1,<3.0.0"
+install = ">=1.3.5,<2.0.0"
+logzero = ">=1.7.0,<2.0.0"
 Morfessor = "2.0.6"
-numpy = "^1.22.2"
-sentence-splitter = "^1.4"
-tqdm = "^4.62.3"
-
-[package.source]
-type = "git"
-url = "https://github.com/ffreemt/seg-text"
-reference = "master"
-resolved_reference = "59ab5335e10de67628caccbc475d237d82856937"
+numpy = ">=1.22.2,<2.0.0"
+polyglot = ">=16.7.4,<17.0.0"
+sentence-splitter = ">=1.4,<2.0"
+tqdm = ">=4.62.3,<5.0.0"
 
 [[package]]
 name = "sentence-splitter"
@@ -642,6 +637,7 @@ typing-extensions = "*"
 [package.source]
 type = "url"
 url = "https://download.pytorch.org/whl/cpu/torch-1.10.0%2Bcpu-cp38-cp38-linux_x86_64.whl"
+
 [[package]]
 name = "tqdm"
 version = "4.62.3"
@@ -688,7 +684,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.8"
-content-hash = "d7bd1ef06556c0e7f0fb9992b0970c898dbb7b5cc4e506236b91507e2fe6bcf4"
+content-hash = "aa683c3bf5cef635775563773e2a3db638b0d90bc41c5199cfac4e068e8859c7"
 
 [metadata.files]
 about-time = [
@@ -799,7 +795,10 @@ mccabe = [
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
-model-pool = []
+model-pool = [
+    {file = "model_pool-0.1.0-py3-none-any.whl", hash = "sha256:0c114bad871b263ae4cf697a80a25dc6af6e78629e0b8156e451ee2300f3b768"},
+    {file = "model_pool-0.1.0.tar.gz", hash = "sha256:43adecbab43f330a2920d66c8c0844b054970c4199509579ebe48ee2cbb44513"},
+]
 more-itertools = [
     {file = "more-itertools-8.12.0.tar.gz", hash = "sha256:7dc6ad46f05f545f900dd59e8dfb4e84a4827b97b3cfecb175ea0c7d247f6064"},
     {file = "more_itertools-8.12.0-py3-none-any.whl", hash = "sha256:43e6dd9942dffd72661a2c4ef383ad7da1e6a3e968a927ad7a6083ab410a688b"},
@@ -868,6 +867,9 @@ pluggy = [
 poethepoet = [
     {file = "poethepoet-0.10.0-py3-none-any.whl", hash = "sha256:6fb3021603d4421c6fcc40072bbcf150a6c52ef70ff4d3be089b8b04e015ef5a"},
     {file = "poethepoet-0.10.0.tar.gz", hash = "sha256:70b97cb194b978dc464c70793e85e6f746cddf82b84a38bfb135946ad71ae19c"},
+]
+polyglot = [
+    {file = "polyglot-16.7.4.tar.gz", hash = "sha256:f7d9cca9a212622548e9416fb89f1238b994b8860ef49e03b7c82c67f9b6269b"},
 ]
 prompt-toolkit = [
     {file = "prompt_toolkit-3.0.28-py3-none-any.whl", hash = "sha256:30129d870dcb0b3b6a53efdc9d0a83ea96162ffd28ffe077e94215b233dc670c"},
@@ -989,7 +991,10 @@ rich = [
     {file = "rich-11.2.0-py3-none-any.whl", hash = "sha256:d5f49ad91fb343efcae45a2b2df04a9755e863e50413623ab8c9e74f05aee52b"},
     {file = "rich-11.2.0.tar.gz", hash = "sha256:1a6266a5738115017bb64a66c59c717e7aa047b3ae49a011ede4abdeffc6536e"},
 ]
-seg-text = []
+seg-text = [
+    {file = "seg_text-0.1.0-py3-none-any.whl", hash = "sha256:a1f3cf0ac7fcbd8debad71c9498518a3c114c63c624b0c4115d1dc23bf966736"},
+    {file = "seg_text-0.1.0.tar.gz", hash = "sha256:a32d57066ea01f6471b5e1c1b4e0d3f7691b10885589dec26cc2db18509d8536"},
+]
 sentence-splitter = [
     {file = "sentence_splitter-1.4-py2.py3-none-any.whl", hash = "sha256:5645a3ad9c348e4287f4bc73bd573d92dccd4139042fddd51fff0591f1376763"},
     {file = "sentence_splitter-1.4.tar.gz", hash = "sha256:3d1d773d07cc733ca2955aa87d0fa1c0a7274c6bdeec1daac5c5e92efb512f63"},
