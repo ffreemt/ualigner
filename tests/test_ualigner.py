@@ -16,8 +16,8 @@ def test_sanity():
         assert True
 
 def test_ualigner():
-    '''
-ultimatumbee\ubee\uclas.py
+    r'''
+    ultimatumbee ubee uclas.py
 
     from model_pool import fetch_check_aux  # pylint: disable=import-error
     from model_pool.model_s import load_model_s  # pylint: disable=import-error
