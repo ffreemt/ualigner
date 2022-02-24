@@ -1,0 +1,8 @@
+# for okteto
+logzero
+icecream 
+install 
+alive-progress 
+sentence-transformers
+model-pool
+seg-text
